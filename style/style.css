@@ -1,0 +1,148 @@
+html {
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+}
+
+.bdCanvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+}
+
+.preloader {
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.animation-logo {
+    width: 200px;
+    height: 200px;
+    position: relative;
+}
+
+.logo-external-circle {
+    width: 100%;
+    height: 100%;
+    background-color: transparents;
+    border: 2px solid white;
+    border-radius: 50%;
+    z-index: 1;
+    position: absolute;
+    opacity: 0.99;
+}
+
+.logo-internal-circle {
+    width: 30%;
+    height: 30%;
+    background-color: rgb(161, 10, 10);
+    border: none;
+    border-radius: 50%;
+    z-index: 2;
+    position: absolute;
+    top: 0;
+    left: 70%;
+}
+
+.logo-title-none {
+    opacity: 0;
+}
+
+.logo-title {
+    background-color: black;
+    color: white;
+    font-size: 28px;
+    background-color: black;
+    text-align: center;
+    vertical-align: middle;
+    position: absolute;
+    z-index: 3;
+    letter-spacing: 7px;
+    opacity: 1;
+    display: inline-block;
+    transition: opacity 2s ease-in;
+}
+
+.internal-animation {
+    top: 70px;
+    left: 70px;
+    animation: loader-logo 10s infinite linear;
+}
+
+@keyframes loader-logo {
+    from {
+        transform: rotate(0deg) translateX(98px) rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg) translateX(98px) rotate(-360deg);
+    }
+}
+
+.main-content-animation {
+    animation: main-content 2s ease-in;
+}
+
+@keyframes main-content {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.active-stub {
+    width: 100%;
+    height: 100%;
+    color: white;
+    z-index: 2;
+}
+
+.main-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    width: 100%;
+    height: 100%;
+}
+
+.wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cause-description, .information-about-company {
+    width: 25%;
+    min-width: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    word-wrap: break-word;
+    margin: 30px;
+}
+
+.main-page span:nth-child(2n+1) {
+    margin-bottom: 40px;
+}
+
+.first-word-in-description {
+    color: red;
+}
+
+.cause-description {
+    font-size: 25px;
+}
