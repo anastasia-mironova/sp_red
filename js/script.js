@@ -4,8 +4,6 @@ addEventListener("load", () => {
 bdCanvas();
 
 function preloaderRemove() {
-    console.log("kek3")
-    console.log("kek1")
     const animatedCircle = document.querySelector(".logo-internal-circle");
     animatedCircle.classList.remove("internal-animation");
     const preloaderElement = document.querySelector(".preloader");
