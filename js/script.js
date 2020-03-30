@@ -2,17 +2,21 @@ addEventListener("load", () => {
     bdCanvas();
     const animatedCircle = document.querySelector(".logo-internal-circle");
     animatedCircle.classList.remove("internal-animation");
+    const preloaderElement = document.querySelector(".preloader");
+    preloaderElement.insertAdjacentHTML("beforeend", '<span class="logo-title-none">SPUTNIK-RED</span>');
     const logoText = document.querySelector(".logo-title-none");
     logoText.classList.add("logo-title");
     logoText.classList.remove("logo-title-none");
-    setTimeout(preloaderRemove(), 5000)
+
+    // const titleLogoElement
+    //  preloaderRemove()
 
 })
 
 function preloaderRemove() {
 
     const preloaderElement = document.querySelector(".preloader");
-    preloaderElement.classList.add("preloader-fading");
+    // preloaderElement.classList.add("preloader-fading");
     preloaderElement.remove();
     const stubElenment = document.querySelector(".main-stub");
     stubElenment.classList.add("active-stub");
