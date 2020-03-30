@@ -1,22 +1,19 @@
 addEventListener("load", () => {
-    bdCanvas();
+    setTimeout(preloaderRemove, 4000);
+})
+bdCanvas();
+
+function preloaderRemove() {
+    console.log("kek3")
+    console.log("kek1")
     const animatedCircle = document.querySelector(".logo-internal-circle");
     animatedCircle.classList.remove("internal-animation");
     const preloaderElement = document.querySelector(".preloader");
-    preloaderElement.insertAdjacentHTML("beforeend", '<span class="logo-title-none">SPUTNIK-RED</span>');
-    const logoText = document.querySelector(".logo-title-none");
-    logoText.classList.add("logo-title");
-    logoText.classList.remove("logo-title-none");
-
-    // const titleLogoElement
-    //  preloaderRemove()
-
-})
-
-function preloaderRemove() {
-
+    preloaderElement.insertAdjacentHTML("beforeend", '<span class="logo-title">SPUTNIK-RED</span>');
+    setTimeout(showContent, 3000)
+}
+function showContent() {
     const preloaderElement = document.querySelector(".preloader");
-    // preloaderElement.classList.add("preloader-fading");
     preloaderElement.remove();
     const stubElenment = document.querySelector(".main-stub");
     stubElenment.classList.add("active-stub");
