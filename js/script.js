@@ -7,8 +7,47 @@ function preloaderRemove() {
     const animatedCircle = document.querySelector(".logo-internal-circle");
     animatedCircle.classList.remove("internal-animation");
     const preloaderElement = document.querySelector(".preloader");
-    preloaderElement.insertAdjacentHTML("beforeend", '<span class="logo-title">SPUTNIK-RED</span>');
+    const logoElement = document.querySelector(".logo-title");
+    logoElement.classList.add("logo-title-active");
+    changeLocale();
     setTimeout(showContent, 3000)
+}
+
+function defineLocale() {
+    return navigator.browserLanguage || navigator.language || navigator.userLanguage;
+}
+function changeLocale(lang) {
+    const currentLang = lang || defineLocale();
+    fetch('locale/locale.json')
+        .then((response) => {
+            return response.json();
+        })
+        .then((languageData) => {
+            if (currentLang === "ru" || currentLang === "ru-RU") {
+                changeText(languageData.ru, "ru");
+            } else {
+                if (currentLang === "en" || currentLang === "en-EN") {
+                    changeText(languageData.en, "en");
+                }
+            }
+        });
+}
+
+function changeText(languageOptions, locale) {
+    const causeText = document.querySelector(".cause");
+    if (locale === "ru") {
+        causeText.innerHTML = '<span class="first-word-in-description">Привет.</span>' + languageOptions.mainInfo;
+    }
+    if (locale === "en") {
+        causeText.innerHTML = '<span class="first-word-in-description">Hello.</span>' + languageOptions.mainInfo;
+    }
+
+    const pushText = document.querySelector(".push");
+    pushText.innerHTML = languageOptions.buttonText;
+    const headerText = document.querySelector(".title-block-contact");
+    headerText.innerHTML = languageOptions.title;
+    const contactText = document.querySelector(".contacts");
+    contactText.innerHTML = languageOptions.contacts;
 }
 function showContent() {
     const preloaderElement = document.querySelector(".preloader");
@@ -17,7 +56,28 @@ function showContent() {
     stubElenment.classList.add("active-stub");
     const mainContentElemet = document.querySelector(".wrapper");
     mainContentElemet.classList.add("main-content-animation");
+    const menuElement = document.querySelector(".main-menu");
+    menuElement.classList.add("main-content-animation");
 }
+
+
+document.querySelector(".language-change").addEventListener("click", () => {
+    const languageChanging = document.querySelector(".language-change");
+    if (languageChanging.classList.contains("ru")) {
+        languageChanging.classList.remove("ru");
+        languageChanging.classList.add("en");
+        languageChanging.innerHTML = "EN";
+        changeLocale("en");
+    } else {
+        if (languageChanging.classList.contains("en")) {
+            languageChanging.classList.remove("en");
+            languageChanging.classList.add("ru");
+            languageChanging.innerHTML = "RU";
+            changeLocale("ru");
+        }
+    }
+
+})
 function bdCanvas() {
 
     opts = {
