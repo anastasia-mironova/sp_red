@@ -1,7 +1,8 @@
 addEventListener("load", () => {
-    setTimeout(preloaderRemove, 4000);
+    bdCanvas();
+    setTimeout(preloaderRemove, 8000);
 })
-bdCanvas();
+
 
 function preloaderRemove() {
     const animatedCircle = document.querySelector(".logo-internal-circle");
@@ -49,7 +50,6 @@ function changeText(languageOptions, locale) {
     contactText.innerHTML = languageOptions.contacts;
 }
 function showContent() {
-    bdCanvas();
     const preloaderElement = document.querySelector(".preloader");
     preloaderElement.remove();
     const stubElenment = document.querySelector(".main-stub");

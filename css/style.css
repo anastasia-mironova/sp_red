@@ -56,7 +56,6 @@ body {
     background-color: #5F0909;
     border: none;
     border-radius: 50%;
-    /* z-index: 2; */
     position: absolute;
     top: 0;
     left: 70%;
@@ -94,7 +93,7 @@ body {
 .internal-animation {
     top: 70px;
     left: 70px;
-    animation: loader-logo 4.72s infinite linear;
+    animation: loader-logo 9s infinite linear;
 }
 
 @keyframes loader-logo {
@@ -235,6 +234,9 @@ body {
     }
     .cause-description, .information-about-company {
         width: 60%;
+    }
+    .cause-description, .information-about-company {
+        margin: 15px;
     }
 }
 
