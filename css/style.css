@@ -93,7 +93,7 @@ body {
 .internal-animation {
     top: 70px;
     left: 70px;
-    animation: loader-logo 9s infinite linear;
+    animation: loader-logo 9.2s infinite linear;
 }
 
 @keyframes loader-logo {
@@ -221,31 +221,6 @@ body {
     margin-top: 2%;
 }
 
-@media screen and (max-width: 768px) {
-    .wrapper {
-        display: flex;
-        flex-direction: column;
-        justify-self: center;
-        align-self: center;
-        margin-top: auto;
-        margin-bottom: auto;
-        justify-content: center;
-        align-items: center;
-    }
-    .cause-description, .information-about-company {
-        width: 90%;
-        text-align: center;
-    }
-    .cause-description, .information-about-company {
-        margin: 15px;
-    }
-    .main-page .cause, .title-block-contact {
-        margin-bottom: 20px;
-        font-size: 10px;
-        line-height: 15px;
-    }
-}
-
 .message-form {
     display: none;
 }
@@ -272,6 +247,7 @@ body {
 
 .email-field, .message-field {
     width: 79%;
+    max-width: 350px;
     justify-self: center;
 }
 
@@ -295,14 +271,40 @@ body {
 
 .email-block, .message-block {
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
 }
 
 .email-block span, .message-block span {
     margin-right: 20px;
-    align-self: center;
+    align-self: flex-start;
 }
 
 .wrapper-hide {
     display: none;
+}
+
+@media screen and (max-width: 768px) {
+    .wrapper {
+        display: flex;
+        flex-direction: column;
+        justify-self: center;
+        align-self: center;
+        margin-top: auto;
+        margin-bottom: auto;
+        justify-content: center;
+        align-items: center;
+    }
+    .cause-description, .information-about-company {
+        width: 90%;
+        text-align: center;
+    }
+    .cause-description, .information-about-company {
+        margin: 15px;
+    }
+    .main-page .cause, .title-block-contact {
+        margin-bottom: 20px;
+        font-size: 10px;
+        line-height: 15px;
+    }
 }

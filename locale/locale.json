@@ -1,14 +1,18 @@
 {
     "en": {
-        "mainInfo": "At the moment the site is being finalized. But you can write to us.",
-        "buttonText": "Push signal",
-        "title": "Head office",
-        "contacts": "+7 (920) 963-85-70 privet@sputnikred.ru Ryazan, Tatarskaya,54/15"
+        "cause": "At the moment the site is being finalized. But you can write to us.",
+        "push": "Push signal",
+        "title-block-contact": "Head office",
+        "contacts": "+7 (920) 963-85-70 privet@sputnikred.ru Ryazan, Tatarskaya,54/15",
+        "message-label": "Message",
+        "submit-label": "Submit"
     },
     "ru": {
-        "mainInfo": " В данный момент сайт находится в разработке, но вы можете написать нам.",
-        "buttonText": "Отправить сигнал",
-        "title": "Главный офис",
-        "contacts": "+7 (920) 963-85-70 privet@sputnikred.ru Рязань, Татарская,54/15"
+        "cause": " В данный момент сайт находится в разработке, но вы можете написать нам.",
+        "push": "Отправить сигнал",
+        "title-block-contact": "Главный офис",
+        "contacts": "+7 (920) 963-85-70 privet@sputnikred.ru Рязань, Татарская,54/15",
+        "message-label": "Сообщение",
+        "submit-label": "Отправить"
     }
 }

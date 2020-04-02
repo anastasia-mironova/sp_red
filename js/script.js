@@ -34,20 +34,20 @@ function changeLocale(lang) {
 }
 
 function changeText(languageOptions, locale) {
-    const causeText = document.querySelector(".cause");
-    if (locale === "ru") {
-        causeText.innerHTML = '<span class="first-word-in-description">Привет.</span>' + languageOptions.mainInfo;
-    }
-    if (locale === "en") {
-        causeText.innerHTML = '<span class="first-word-in-description">Hello.</span>' + languageOptions.mainInfo;
-    }
+    for (key in languageOptions) {
+        let element = document.querySelector("." + key)
+        if (key === "cause") {
+            if (locale === "ru") {
+                element.innerHTML = '<span class="first-word-in-description">Привет.</span>' + languageOptions[key];
+            }
+            if (locale === "en") {
+                element.innerHTML = '<span class="first-word-in-description">Hello.</span>' + languageOptions[key];
+            }
+        } else {
+            element.innerHTML = languageOptions[key];
+        }
 
-    const pushText = document.querySelector(".push");
-    pushText.innerHTML = languageOptions.buttonText;
-    const headerText = document.querySelector(".title-block-contact");
-    headerText.innerHTML = languageOptions.title;
-    const contactText = document.querySelector(".contacts");
-    contactText.innerHTML = languageOptions.contacts;
+    }
 }
 function showContent() {
     const preloaderElement = document.querySelector(".preloader");
