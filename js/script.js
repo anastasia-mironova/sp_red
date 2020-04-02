@@ -6,7 +6,6 @@ bdCanvas();
 function preloaderRemove() {
     const animatedCircle = document.querySelector(".logo-internal-circle");
     animatedCircle.classList.remove("internal-animation");
-    const preloaderElement = document.querySelector(".preloader");
     const logoElement = document.querySelector(".logo-title");
     logoElement.classList.add("logo-title-active");
     changeLocale();
@@ -50,6 +49,7 @@ function changeText(languageOptions, locale) {
     contactText.innerHTML = languageOptions.contacts;
 }
 function showContent() {
+    bdCanvas();
     const preloaderElement = document.querySelector(".preloader");
     preloaderElement.remove();
     const stubElenment = document.querySelector(".main-stub");
@@ -81,7 +81,21 @@ document.querySelector(".language-change").addEventListener("click", () => {
 document.querySelector(".push").addEventListener("click", () => {
     const formElement = document.querySelector(".message-form");
     formElement.classList.toggle("message-form-show");
-    bdCanvas();
+    const contentElement = document.querySelector(".wrapper");
+    contentElement.classList.toggle("wrapper-hide")
+})
+
+$(document).ready(function () {
+    $("#message-form").submit(function () {
+        $.ajax({
+            type: "POST",
+            url: "php/mail.php",
+            data: $(this).serialize()
+        }).done(function () {
+            alert("Отправлено!Мы скоро с вами свяжемся!")
+        })
+        return false;
+    })
 })
 
 function bdCanvas() {
@@ -100,8 +114,8 @@ function bdCanvas() {
 
     function resizeCanvas() {
 
-        w = canvas.width = document.documentElement.clientWidth;
-        h = canvas.height = document.documentElement.clientHeight;
+        w = canvas.width = Math.max(document.documentElement.clientWidth, document.documentElement.scrollWidth);
+        h = canvas.height = Math.max(document.documentElement.clientHeight, document.documentElement.scrollHeight);
     }
 
     window.addEventListener("resize", function () {

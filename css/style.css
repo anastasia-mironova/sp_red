@@ -53,7 +53,7 @@ body {
 .logo-internal-circle {
     width: 30%;
     height: 30%;
-    background-color: rgb(161, 10, 10);
+    background-color: #5F0909;
     border: none;
     border-radius: 50%;
     /* z-index: 2; */
@@ -184,7 +184,7 @@ body {
 }
 
 .push:hover, .push:hover, .language-change:hover {
-    color: red;
+    color: #5F0909;
 }
 
 .information-about-company span:first-child {
@@ -198,7 +198,7 @@ body {
 }
 
 .first-word-in-description {
-    color: red;
+    color: #5F0909;
 }
 
 .language-change {
@@ -245,9 +245,12 @@ body {
 .message-form-show {
     display: flex;
     width: 40%;
+    white-space: nowrap;
+    min-width: 350px;
     flex-direction: column;
     z-index: 3;
     align-self: center;
+    margin: auto 0;
 }
 
 .email-field, .message-field, .send-button {
@@ -260,7 +263,7 @@ body {
 }
 
 .email-field, .message-field {
-    width: 80%;
+    width: 79%;
     justify-self: center;
 }
 
@@ -279,7 +282,7 @@ body {
 }
 
 .email-field:focus:hover, .message-field:focus:hover, .send-button:hover {
-    box-shadow: 0 0 5px 1px red;
+    box-shadow: 0 0 5px 1px #5F0909;
 }
 
 .email-block, .message-block {
@@ -290,4 +293,8 @@ body {
 .email-block span, .message-block span {
     margin-right: 20px;
     align-self: center;
+}
+
+.wrapper-hide {
+    display: none;
 }
