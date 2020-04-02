@@ -78,6 +78,12 @@ document.querySelector(".language-change").addEventListener("click", () => {
     }
 
 })
+document.querySelector(".push").addEventListener("click", () => {
+    const formElement = document.querySelector(".message-form");
+    formElement.classList.toggle("message-form-show");
+    bdCanvas();
+})
+
 function bdCanvas() {
 
     opts = {
