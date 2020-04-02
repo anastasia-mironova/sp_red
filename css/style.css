@@ -236,7 +236,10 @@ body {
         width: 60%;
     }
     .cause-description, .information-about-company {
-        margin: 15px;
+        margin: 20px;
+    }
+    .main-page .cause, .title-block-contact {
+        margin-bottom: 20px;
     }
 }
 
