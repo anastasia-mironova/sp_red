@@ -80,9 +80,12 @@ document.querySelector(".language-change").addEventListener("click", () => {
 })
 document.querySelector(".push").addEventListener("click", () => {
     const formElement = document.querySelector(".message-form");
-    formElement.classList.toggle("message-form-show");
+    formElement.classList.add("message-form-show");
     const contentElement = document.querySelector(".wrapper");
-    contentElement.classList.toggle("wrapper-hide")
+    console.log(contentElement.classList.contains("wrapper-hide"));
+
+    contentElement.classList.add("wrapper-hide");
+    console.log(contentElement.classList.contains("wrapper-hide"));
 })
 
 // $(document).ready(function () {

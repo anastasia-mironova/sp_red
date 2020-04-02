@@ -272,7 +272,7 @@ body {
 .email-block, .message-block {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    align-items: center;
 }
 
 .email-block span, .message-block span {
@@ -295,6 +295,9 @@ body {
         justify-content: center;
         align-items: center;
     }
+    .wrapper-hide {
+        display: none;
+    }
     .cause-description, .information-about-company {
         width: 90%;
         text-align: center;
@@ -306,5 +309,8 @@ body {
         margin-bottom: 20px;
         font-size: 10px;
         line-height: 15px;
+    }
+    .message-form {
+        justify-self: center;
     }
 }
