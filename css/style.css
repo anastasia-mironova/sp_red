@@ -234,6 +234,7 @@ body {
     }
     .cause-description, .information-about-company {
         width: 90%;
+        text-align: center;
     }
     .cause-description, .information-about-company {
         margin: 20px;

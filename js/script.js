@@ -85,18 +85,18 @@ document.querySelector(".push").addEventListener("click", () => {
     contentElement.classList.toggle("wrapper-hide")
 })
 
-$(document).ready(function () {
-    $("#message-form").submit(function () {
-        $.ajax({
-            type: "POST",
-            url: "php/mail.php",
-            data: $(this).serialize()
-        }).done(function () {
-            alert("Отправлено!Мы скоро с вами свяжемся!")
-        })
-        return false;
-    })
-})
+// $(document).ready(function () {
+//     $("#message-form").submit(function () {
+//         $.ajax({
+//             type: "POST",
+//             url: "php/mail.php",
+//             data: $(this).serialize()
+//         }).done(function () {
+//             alert("Отправлено!Мы скоро с вами свяжемся!")
+//         })
+//         return false;
+//     })
+// })
 
 function bdCanvas() {
 
@@ -113,7 +113,6 @@ function bdCanvas() {
     resizeCanvas();
 
     function resizeCanvas() {
-
         w = canvas.width = Math.max(document.documentElement.clientWidth, document.documentElement.scrollWidth);
         h = canvas.height = Math.max(document.documentElement.clientHeight, document.documentElement.scrollHeight);
     }
