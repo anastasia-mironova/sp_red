@@ -233,14 +233,15 @@ body {
         align-items: center;
     }
     .cause-description, .information-about-company {
-        width: 70%;
+        width: 90%;
     }
     .cause-description, .information-about-company {
         margin: 20px;
     }
     .main-page .cause, .title-block-contact {
         margin-bottom: 20px;
-        font-size: 15px;
+        font-size: 10px;
+        line-height: 15px;
     }
 }
 
